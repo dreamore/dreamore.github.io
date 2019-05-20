@@ -1,0 +1,250 @@
+/* CSS Reset
+*/
+html, body, div, span, applet, object, iframe,
+blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	outline: none;
+}
+html, body {
+	height: 100%;
+}
+
+
+/* Общие стили
+*/
+body {
+	font: 16px Arial, sans-serif;
+	width: 100%;
+	color: #000;
+	background-color: #eee;
+}
+a {
+	color: #1e96c8;
+}
+a:hover {
+	text-decoration: none;
+}
+.main_wrapper {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	min-height: 100%;
+	max-width: 1240px;
+	min-width: 420px;
+	margin: auto;
+	padding: 0 20px;
+	background-color: #eee;
+}
+
+
+/* Контент
+*/
+.about {
+	margin-top: 15px;
+	padding: 1px 15px 5px;
+	background-color: #fefefe;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.about img {
+	float: right;
+	margin: 17px 0 40px 30px;
+}
+.about h2 {
+	margin-top: 35px;
+}
+
+h1 {
+	font-size: 25px;
+}
+h1 + p {
+	font-size: 19px;
+}
+
+.main_content {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 auto;
+	        flex: 1 auto;
+	padding-bottom: 20px;
+}
+
+.m_right {
+	float: right;
+	width: 210px;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 20px;
+}
+.m_right,
+.footer {
+	background-color: #fefefe;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+	margin-top: 20px;
+	padding: 0 15px;
+}
+.m_right img,
+.footer img {
+	max-width: 24px;
+	max-height: 24px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.right_side .m_content {
+	margin: 20px 230px 0 0;
+	padding: 0 15px;
+	background-color: #fefefe;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.m_content {
+	overflow: hidden;
+}
+.m_content ul {
+	padding: 0;
+	list-style-type: none;
+}
+.m_content li {
+	border: 2px solid #fefefe;
+	border-bottom-color: #eee;
+	margin: 15px 0;
+	padding: 1px 11px 15px;
+	text-align: justify;
+}
+.m_content li:last-child {
+	border-bottom-color: #fefefe;
+}
+.m_content li:hover {
+	border-color: #eee;
+}
+.m_content .company {
+	font-size: 18px;
+	font-weight: bold;
+}
+.m_content .post {
+	font-size: 17px;
+	font-weight: bold;
+}
+.m_content .period {
+	text-align: right;
+}
+
+.footer {
+	display: none;
+}
+
+
+/* Адаптив
+*/
+@media screen and (max-width: 768px) {
+	.about img {
+		max-width: 165px;
+		height: auto;
+		margin-left: 20px;
+	}
+	.m_right {
+		width: 180px;
+	}
+	.right_side .m_content {
+		margin-right: 200px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.m_right,
+	.footer {
+		float: none;
+		position: static;
+		width: auto;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+	.m_right h2,
+	.footer h2 {
+		width: 100%;
+		margin-bottom: 0;
+
+	}
+	.right_side .m_content {
+		margin-right: 0;
+	}
+	.m_content li {
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+}
+
+@media print {
+	.about,
+	.right_side .m_content,
+	.m_right,
+	.footer {
+		box-shadow: none;
+	}
+	.m_right {
+		float: none;
+		position: static;
+		width: auto;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+	.m_right h2,
+	.footer h2 {
+		width: 100%;
+		margin-bottom: 0;
+
+	}
+	.m_right a {
+		text-decoration: none;
+		color: #000;
+	}
+	.m_right a span {
+		display: none;
+	}
+	.m_right a.telegram:after {
+		content: '@dreamore';
+	}
+	.m_right a.email:after {
+		content: 'dreamorene@gmail.com';
+	}
+	.right_side .m_content {
+		margin-right: 0;
+	}
+}
