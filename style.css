@@ -257,3 +257,9 @@ h1 + p {
 		margin-right: 0;
 	}
 }
+
+@media print {
+    div {
+        page-break-inside: avoid;
+    }
+}
