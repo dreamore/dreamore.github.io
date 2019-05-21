@@ -253,8 +253,7 @@ h1 + p {
 	.m_right a.email:after {
 		content: 'dreamorene@gmail.com';
 	}
-	.right_side .m_content {
-		margin-right: 0;
+	.m_content {
 		page-break-inside: avoid;
 	}
 }
