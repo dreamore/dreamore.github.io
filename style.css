@@ -211,7 +211,6 @@ h1 + p {
 @media print {
 	* {
 		background: none;
-		page-break-inside: avoid;
 	}
 	.about,
 	.right_side .m_content,
@@ -256,5 +255,6 @@ h1 + p {
 	}
 	.right_side .m_content {
 		margin-right: 0;
+		page-break-inside: avoid;
 	}
 }
