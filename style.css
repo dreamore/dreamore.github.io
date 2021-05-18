@@ -103,22 +103,39 @@ h1 + p {
 	position: sticky;
 	top: 20px;
 }
-.m_right,
-.footer {
+.print_button {
+    height: 40px;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    color: #1e96c8;
+    text-decoration: underline;
+}
+.contacts {
+	display: flow-root;
+}
+.contacts,
+.print_button {
+    width: 100%;
+}
+.contacts,
+.print_button,
+footer {
 	background-color: #fefefe;
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 	margin-top: 20px;
 	padding: 0 15px;
 }
 .m_right img,
-.footer img {
+footer img {
 	max-width: 24px;
 	max-height: 24px;
 	vertical-align: middle;
 	margin-right: 10px;
 }
 
-.right_side .m_content {
+.main_content .m_content {
 	margin: 20px 230px 0 0;
 	padding: 0 15px;
 	background-color: #fefefe;
@@ -157,7 +174,7 @@ h1 + p {
 	text-align: right;
 }
 
-.footer {
+footer.contacts {
 	display: none;
 }
 
@@ -173,17 +190,18 @@ h1 + p {
 	.m_right {
 		width: 180px;
 	}
-	.right_side .m_content {
+	.main_content .m_content {
 		margin-right: 200px;
 	}
 }
 
 @media screen and (max-width: 640px) {
-	.m_right,
-	.footer {
+	.m_right {
 		float: none;
 		position: static;
 		width: auto;
+	}
+	.contacts, footer.contacts {		
 		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
@@ -193,19 +211,18 @@ h1 + p {
 		justify-content: space-between;
 		align-items: baseline;
 	}
-	.m_right h2,
-	.footer h2 {
+	.m_right h2, .contacts h2 {
 		width: 100%;
 		margin-bottom: 0;
-
 	}
-	.right_side .m_content {
+	.main_content .m_content {
 		margin-right: 0;
 	}
 	.m_content li {
 		padding-left: 6px;
 		padding-right: 6px;
 	}
+
 }
 
 @media print {
@@ -213,12 +230,17 @@ h1 + p {
 		background: none;
 	}
 	.about,
-	.right_side .m_content,
+	.main_content .m_content,
 	.m_right,
-	.footer {
+	.contacts {
 		box-shadow: none;
 	}
 	.m_right {
+		float: none;
+		position: static;
+		width: auto;
+	}
+	.contacts {
 		float: none;
 		position: static;
 		width: auto;
@@ -231,8 +253,7 @@ h1 + p {
 		justify-content: space-between;
 		align-items: baseline;
 	}
-	.m_right h2,
-	.footer h2 {
+	.m_right h2 {
 		width: 100%;
 		margin-bottom: 0;
 
@@ -253,7 +274,10 @@ h1 + p {
 	.m_right a.email:after {
 		content: 'dreamorene@gmail.com';
 	}
-	.right_side .m_content {
+	.main_content .m_content {
 		margin-right: 0;
+	}
+	.print_button {
+		display: none;
 	}
 }
